@@ -18,13 +18,3 @@
 	"trailingComma": "none",
 	"useTabs": true
 }
-{
-  "singleQuote": true,
-  "jsxSingleQuote": true,
-  "semi": true,
-  "tabWidth": 2,
-  "bracketSpacing": true,
-  "arrowParens": "always",
-  "trailingComma": "es5",
-  "endOfLine": "auto"
-}
