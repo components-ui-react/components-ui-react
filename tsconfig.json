@@ -17,6 +17,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "cypress/e2e/indexDCard.cy.tsx"],
+  "include": ["src", "./cypress.d.ts",
+	"cypress/e2e/**.cy.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
