@@ -1,5 +1,10 @@
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes } from "react";
 
 export default function Input(props: HTMLAttributes<HTMLInputElement>) {
-  return <input defaultValue='teste' {...props} />;
+	return (
+		<input
+			defaultValue='teste'
+			{...props}
+		/>
+	);
 }

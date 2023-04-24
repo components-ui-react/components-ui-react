@@ -1,15 +1,33 @@
-// eslint-disable-next-line no-undef
 module.exports = {
-	env: { browser: true, es2020: true },
+	env: { browser: true, es2021: true },
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:react-hooks/recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended"
+	],
+	overrides: [
+		{
+			files: ["*.ts", "*.tsx"],
+			parserOptions: {
+				project: ["./tsconfig.json"]
+			}
+		}
 	],
 	parser: "@typescript-eslint/parser",
-	parserOptions: { ecmaVersion: "latest", sourceType: "module" },
-	plugins: ["react-refresh"],
-	rules: {
-		"react-refresh/only-export-components": "warn",
+	parserOptions: {
+		ecmaVersion: "latest",
+		sourceType: "module",
+		project: "./tsconfig.json"
 	},
+	plugins: ["react", "@typescript-eslint", "prettier"],
+	rules: {
+		"react/react-in-jsx-scope": "off"
+	},
+	settings: {
+		react: {
+			version: "detect"
+		}
+	}
 };
