@@ -1,0 +1,5 @@
+build
+node_modules
+cypress
+commitlint.config.ts
+vite.config.ts
