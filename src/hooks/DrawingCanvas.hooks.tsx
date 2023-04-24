@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef } from 'react';
 
-export function useOnDraw(onDraw: any) {
+export function useOnDraw(onDraw: (ctx: CanvasRenderingContext2D | null, point: {x: number, y:number} | null, prevPoint: {x: number, y:number} | null) => void) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
-  const prevPointRef = useRef<any | null>(null);
+  const prevPointRef = useRef< {x: number, y: number} | null>(null);
 
-  const mouseMoveListenerRef = useRef<any | null>(null);
-  const mouseUpListenerRef = useRef<any | null>(null);
+  const mouseMoveListenerRef = useRef< any| null>(null);
+  const mouseUpListenerRef = useRef< any | null>(null);
 
   function setCanvasRef(ref: HTMLCanvasElement | null) {
     canvasRef.current = ref;

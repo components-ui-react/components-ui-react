@@ -12,6 +12,12 @@ https://www.npmjs.com/package/@unusual-components/components-ui-react
 npm install @unusual-components/components-ui-react
 ```
 
+## run local
+
+```bash
+npm i
+npm run start
+```
 
 ## 💻 Tecnologias:
 
